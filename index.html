@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafiz Awais</title>
+  <title>Awais Mahmood</title>
 
   <!-- 
     - favicon
@@ -139,7 +139,7 @@
           </li>
 
           <li>
-            <a href="https://pk.linkedin.com/in/hafiz-awais-48694b156" target="_blank" class="hero-social-link">
+            <a href="https://www.linkedin.com/in/awais-mahmood-48694b156/" target="_blank" class="hero-social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
 
               <div class="tooltip">Linkedin</div>
@@ -236,7 +236,7 @@
           <h2 class="h3 section-title">Need a Creative Product? I can Help You!</h2>
 
           <p class="section-text">
-            Hi! I’m Hafiz Awais, and I’m a developer who has passion for building clean web applications with intuitive
+            Hi! I’m Awais, and I’m a developer who has passion for building clean web applications with intuitive
             functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always
             curious about
             learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have
@@ -247,7 +247,7 @@
           <div class="btn-group">
             <button class="btn btn-secondary" onclick="window.location.href='mailto:awaismahmood4@gmail.com'">Hire me</button>
 
-            <button class="btn btn-primary" onclick="window.location.href='./assets/images/Hafiz_Awais_Resume_19-07-2023-10-35-51.pdf'" download>Download cv</button>
+            <button class="btn btn-primary" onclick="window.location.href='./assets/images/Awais_Mahmood.pdf'" download>Download cv</button>
           </div>
 
         </div>
@@ -827,7 +827,7 @@
                 </li>
 
                 <li>
-                  <a href="https://pk.linkedin.com/in/hafiz-awais-48694b156" target="_blank" class="contact-social-link">
+                  <a href="https://www.linkedin.com/in/awais-mahmood-48694b156/" target="_blank" class="contact-social-link">
                     <div class="tooltip">Linkedin</div>
 
                     <ion-icon name="logo-linkedin"></ion-icon>
@@ -849,7 +849,7 @@
 
         </div>
 
-        <form action="" class="contact-form">
+        <form action="" class="contact-form" method="POST">
 
           <div class="form-wrapper">
 
@@ -911,6 +911,9 @@
 
           <button type="submit" class="btn btn-primary">Send</button>
 
+          <div class="submit-success" data-submit=""><p>Message sent!🎉</p></div>
+        <div class="submit-error" data-submit=""><p>Error.</p></div>
+
         </form>
 
       </section>
@@ -931,7 +934,7 @@
 
       <p class="h1 logo">
         <a href="#">
-         Hafiz Awais<span>.</span>
+        Awais Mahmood<span>.</span>
         </a>
       </p>
 
@@ -968,6 +971,52 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    const form = document.getElementById("form");
+    const successMessage = document.querySelector(".submit-success");
+    const errorMessage = document.querySelector(".submit-error");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      // Collect form data
+      const formData = new FormData(form);
+      const formDataObject = {};
+      formData.forEach((value, key) => {
+        formDataObject[key] = value;
+      });
+  
+      // Send data to Airtable
+      const webhookURL =
+        "https://hooks.airtable.com/workflows/v1/genericWebhook/appd6UWer0tFQ2Duy/wflQoem7gYobHGmEu/wtrLBONFf4LRRSGOE";
+  
+      try {
+        const response = await fetch(webhookURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataObject),
+        });
+  
+        if (response.ok) {
+          // Show success message if the response is successful
+          successMessage.style.display = "block";
+          errorMessage.style.display = "none";
+        } else {
+          // Show error message if there was an issue with the response
+          successMessage.style.display = "none";
+          errorMessage.style.display = "block";
+        }
+      } catch (error) {
+        // Show error message if there was a network or other error
+        successMessage.style.display = "none";
+        errorMessage.style.display = "block";
+      }
+    });
+  </script>
+  
 
 </body>
 

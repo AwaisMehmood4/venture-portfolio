@@ -63,23 +63,23 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#home" class="navbar-link">Home.</a>
+            <a href="#home" class="navbar-link" data-nav-home >Home.</a>
           </li>
 
           <li>
-            <a href="#about" class="navbar-link">About.</a>
+            <a href="#about" class="navbar-link" data-nav-about>About.</a>
           </li>
 
           <li>
-            <a href="#skills" class="navbar-link">Skills.</a>
+            <a href="#skills" class="navbar-link" data-nav-skills>Skills.</a>
           </li>
 
           <li>
-            <a href="#portfolio" class="navbar-link">Portfolio.</a>
+            <a href="#portfolio" class="navbar-link" data-nav-portfolio>Portfolio.</a>
           </li>
 
           <li>
-            <a href="#contact" class="navbar-link">Contact.</a>
+            <a href="#contact" class="navbar-link" data-nav-contact>Contact.</a>
           </li>
 
         </ul>
@@ -616,7 +616,7 @@
             <a href="https://www.augmentscale.com/" target="_blank" class="project-card">
 
               <figure class="card-banner">
-                <img src="./assets/images/augment scale.png" class="w-100" alt="A macintosh on a yellow background.">
+                <img src="./assets/images/Awais RedBuff (1).png" class="w-100" alt="A macintosh on a yellow background.">
               </figure>
 
               <div class="card-content">
@@ -849,7 +849,7 @@
 
         </div>
 
-        <form action="" class="contact-form" method="POST">
+        <!-- <form class="contact-form" method="POST" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appd6UWer0tFQ2Duy/wflQoem7gYobHGmEu/wtrLBONFf4LRRSGOE">
 
           <div class="form-wrapper">
 
@@ -914,7 +914,7 @@
           <div class="submit-success" data-submit=""><p>Message sent!🎉</p></div>
         <div class="submit-error" data-submit=""><p>Error.</p></div>
 
-        </form>
+        </form> -->
 
       </section>
 
@@ -972,7 +972,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
+  <!-- <script>
     const form = document.getElementById("form");
     const successMessage = document.querySelector(".submit-success");
     const errorMessage = document.querySelector(".submit-error");
@@ -996,6 +996,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Accept": "application/json",
           },
           body: JSON.stringify(formDataObject),
         });
@@ -1004,6 +1005,7 @@
           // Show success message if the response is successful
           successMessage.style.display = "block";
           errorMessage.style.display = "none";
+          window.location('#')
         } else {
           // Show error message if there was an issue with the response
           successMessage.style.display = "none";
@@ -1016,7 +1018,7 @@
       }
     });
   </script>
-  
+   -->
 
 </body>
 

@@ -34,9 +34,48 @@ window.addEventListener("scroll", function () {
  */
 
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const navToggleHome = document.querySelector("[data-nav-home]");
+const navToggleAbout = document.querySelector("[data-nav-about]");
+const navToggleSkills = document.querySelector("[data-nav-skills]");
+const navTogglePortfolio = document.querySelector("[data-nav-portfolio]");
+const navToggleContact = document.querySelector("[data-nav-contact]");
 const navbar = document.querySelector("[data-navbar]");
 
 navToggleBtn.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});
+
+navToggleHome.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});
+
+navToggleAbout.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});navToggleSkills.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});navTogglePortfolio.addEventListener("click", function () {
+
+  elemToggleFunc(navToggleBtn);
+  elemToggleFunc(navbar);
+  elemToggleFunc(document.body);
+
+});navToggleContact.addEventListener("click", function () {
 
   elemToggleFunc(navToggleBtn);
   elemToggleFunc(navbar);

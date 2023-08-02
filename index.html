@@ -10,7 +10,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/Awais-Logo.jpg" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -616,7 +616,7 @@
             <a href="https://www.augmentscale.com/" target="_blank" class="project-card">
 
               <figure class="card-banner">
-                <img src="./assets/images/Awais RedBuff (1).png" class="w-100" alt="A macintosh on a yellow background.">
+                <img src="./assets/images/AugmentScale.png" class="w-100" alt="A macintosh on a yellow background.">
               </figure>
 
               <div class="card-content">
@@ -699,7 +699,7 @@
             <a href="https://redbuffer.ai/" target="_blank" class="project-card">
 
               <figure class="card-banner">
-                <img src="./assets/images/redbuffer.png" class="w-100"
+                <img src="./assets/images/Awais RedBuff (1).png" class="w-100"
                   alt="On a yellow background, a digital watch and a glass.">
               </figure>
 
@@ -849,7 +849,7 @@
 
         </div>
 
-        <!-- <form class="contact-form" method="POST" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appd6UWer0tFQ2Duy/wflQoem7gYobHGmEu/wtrLBONFf4LRRSGOE">
+        <form class="contact-form" id="contact-form" method="POST" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appd6UWer0tFQ2Duy/wflQoem7gYobHGmEu/wtrLBONFf4LRRSGOE">
 
           <div class="form-wrapper">
 
@@ -914,7 +914,7 @@
           <div class="submit-success" data-submit=""><p>Message sent!🎉</p></div>
         <div class="submit-error" data-submit=""><p>Error.</p></div>
 
-        </form> -->
+        </form>
 
       </section>
 
@@ -972,6 +972,35 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  
+    <!-- <script>
+    $(document).ready(function(){
+      $('#btn-submit').on('click', function	(){
+        let data = $('#contact-form').serialize();
+        $.ajax({
+           type: "POST",
+           method: "POST",
+           url: 'https://hooks.airtable.com/workflows/v1/genericWebhook/appd6UWer0tFQ2Duy/wflQoem7gYobHGmEu/wtrLBONFf4LRRSGOE',
+           data: $('#form').serialize(),
+           success: function (result) {
+            iziToast.success({
+                title: 'Success',
+                message: 'Message Sent Successfully!',
+            });
+          },
+          error: function (result) {
+            console.log(result);
+            iziToast.error({
+                title: 'Something went wrong',
+                message: 'Some Issue Occured',
+            });
+           }
+      });
+      });
+    });
+
+  </script> -->
+  
   <!-- <script>
     const form = document.getElementById("form");
     const successMessage = document.querySelector(".submit-success");
